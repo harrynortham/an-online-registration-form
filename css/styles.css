@@ -1,0 +1,152 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #2d3944;
+}
+
+p,
+label,
+span {
+  color: #666;
+}
+
+p {
+  font-size: 1em;
+}
+
+header {
+  background: #53bbb4;
+  padding: 20px 0;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  margin: 0;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.wrap {
+  padding: 0 20px;
+}
+
+main .wrap {
+  background: #f6f6f6;
+  padding-bottom: 30px;
+}
+
+.form-header {
+  text-align: center;
+  padding: 20px 0;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+}
+
+legend {
+  padding: 10px 0 20px 0;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.form-item,
+.other-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.other-item {
+  margin-top: 1em;
+}
+
+input,
+select,
+textarea {
+  background: #eff0f1;
+  border-radius: 5px;
+  border: 0;
+  padding: 15px;
+  margin: 10px 0;
+  color: #2d3944;
+  transition: border-width 0.2s linear;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border: 2px solid #53bbb4;
+  outline: none;
+}
+
+input::placeholder {
+  text-align: right;
+  color: #bbb;
+  font-size: 0.8em;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 15px;
+}
+
+textarea {
+  min-height: 140px;
+}
+
+button[type="submit"] {
+  display: block;
+  color: white;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  background: #2d3944;
+  padding: 15px;
+  font-size: 1.2em;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  opacity: .95;
+}
+
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background: #f6f6f6;
+  margin-top: 30px;
+}
+
+@media (min-width: 768px) {
+  .wrap {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .form-item {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .form-item label {
+    min-width: 30%;
+  }
+
+  .form-item input,
+  .form-item select {
+    flex-grow: 1;
+  }
+
+  .form-item.zip input {
+    flex-grow: .1;
+  }
+}
